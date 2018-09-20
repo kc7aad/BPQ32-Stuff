@@ -6,7 +6,7 @@ spawn telnet ewawan.kc7aad.com 8010
 expect "User:"
 send "<YourUsername>\r"
 expect "Password:"
-send "<YHourPassword>\r"
+send "<YourPassword>\r"
 
 # Wait for a prompt. Adjust these as needed to match the expected prompts.
 expect "EWAWAN:K7TJ-9} RMS DX BBS CONNECT BYE INFO NODES ROUTES PORTS USERS MHEARD"
