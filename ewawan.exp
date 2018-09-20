@@ -1,0 +1,19 @@
+#!/usr/bin/expect -f
+#!/bin/bash
+#exp_internal 1
+
+spawn telnet ewawan.kc7aad.com 8010
+expect "User:"
+send "<YourUsername>\r"
+expect "Password:"
+send "<YHourPassword>\r"
+
+# Wait for a prompt. Adjust these as needed to match the expected prompts.
+expect "EWAWAN:K7TJ-9} RMS DX BBS CONNECT BYE INFO NODES ROUTES PORTS USERS MHEARD"
+send "c 4 pull96-1\r"
+expect "EWAWAN:K7TJ-9} Connected to PULL96-1"
+expect "EWAWAN:K7TJ-9} Failure with PULL96-1"
+send "bye\r"
+expect "Goodbye"
+
+
